@@ -1,0 +1,8 @@
+#import "./episode.graphql"
+type Show {
+  title: String!
+  description: String
+  lastUpdate: String
+  image: String
+  episodes: [Episode]
+}

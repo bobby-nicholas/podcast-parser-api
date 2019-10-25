@@ -1,0 +1,10 @@
+{
+  "presets": [
+    ["@babel/preset-env"]
+  ],
+  "plugins": [
+    ["import-graphql"],
+    ["babel-plugin-root-import"],
+    ["@babel/plugin-transform-runtime"]
+  ]
+}

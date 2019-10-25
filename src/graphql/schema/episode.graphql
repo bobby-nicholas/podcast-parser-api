@@ -1,0 +1,8 @@
+#import "./file.graphql"
+type Episode {
+  title: String!
+  description: String!
+  published: String!
+  image: String
+  file: File
+}

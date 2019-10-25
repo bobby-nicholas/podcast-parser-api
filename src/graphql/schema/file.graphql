@@ -1,0 +1,5 @@
+type File {
+  link: String
+  size: Int
+  duration: String
+}

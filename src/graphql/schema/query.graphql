@@ -1,0 +1,4 @@
+#import "show.graphql"
+type Query {
+  show(url: String!): Show
+}

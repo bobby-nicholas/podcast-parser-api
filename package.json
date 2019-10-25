@@ -1,0 +1,29 @@
+{
+ "private": true,
+ "devDependencies": {
+  "@babel/cli": "^7.6.4",
+  "@babel/core": "^7.6.4",
+  "@babel/plugin-transform-runtime": "^7.6.2",
+  "@babel/preset-env": "^7.6.3",
+  "babel-loader": "^8.0.6",
+  "babel-plugin-import-graphql": "^2.7.0",
+  "babel-plugin-root-import": "^6.4.1",
+  "nodemon": "^1.19.3",
+  "webpack": "^4.41.1",
+  "webpack-cli": "^3.3.9"
+ },
+ "scripts": {
+  "clean": "rm -rf ./node_modules/.cache/babel-loader",
+  "build": "yarn clean && webpack --mode production --module-bind js=babel-loader --target node",
+  "dev": "webpack --mode development --module-bind js=babel-loader --target node",
+  "start": "yarn dev && nodemon dist/main.js"
+ },
+ "dependencies": {
+  "@babel/runtime": "^7.6.3",
+  "apollo-server": "^2.9.6",
+  "apollo-server-plugin-response-cache": "^0.3.5",
+  "graphql": "^14.5.8",
+  "node-cache": "^4.2.1",
+  "rss-parser": "^3.7.3"
+ }
+}
