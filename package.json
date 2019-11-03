@@ -9,6 +9,8 @@
   "babel-plugin-import-graphql": "^2.7.0",
   "babel-plugin-root-import": "^6.4.1",
   "nodemon": "^1.19.3",
+  "serverless": "^1.55.1",
+  "serverless-webpack": "^5.3.1",
   "webpack": "^4.41.1",
   "webpack-cli": "^3.3.9"
  },
@@ -16,11 +18,12 @@
   "clean": "rm -rf ./node_modules/.cache/babel-loader",
   "build": "yarn clean && webpack --mode production --module-bind js=babel-loader --target node",
   "dev": "webpack --mode development --module-bind js=babel-loader --target node",
-  "start": "yarn dev && nodemon dist/main.js"
+  "start": "yarn dev && nodemon dist/main.js",
+  "deploy": "serverless deploy --verbose"
  },
  "dependencies": {
   "@babel/runtime": "^7.6.3",
-  "apollo-server": "^2.9.6",
+  "apollo-server-lambda": "^2.9.7",
   "apollo-server-plugin-response-cache": "^0.3.5",
   "graphql": "^14.5.8",
   "node-cache": "^4.2.1",

@@ -1,6 +1,6 @@
-import { ApolloServer } from 'apollo-server'
-import gql from './graphql'
+import { ApolloServer } from 'apollo-server-lambda'
+import config from './graphql'
 
-const server = new ApolloServer(gql)
+const server = new ApolloServer(config)
 
-server.listen().then(({url}) => console.log(url))
+export const graphqlHandler = server.createHandler({ cors: { origin: '*', methods: '*' } })

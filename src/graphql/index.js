@@ -1,5 +1,5 @@
 import GQLSchema from './schema/query.graphql'
-import { gql } from 'apollo-server'
+import { gql } from 'apollo-server-lambda'
 import responseCachePlugin from 'apollo-server-plugin-response-cache'
 import { resolvers } from './resolvers'
 
